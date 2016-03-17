@@ -53,7 +53,14 @@ public class Vehicle {
 	public Dimension getSize() {
 		return size;
 	}
+	private double acceleration = .1; // m/sec^2
+	public double getAcceleration() {
+		return acceleration;
+	}
 
+	public void setAcceleration(double acceleration) {
+		this.acceleration = acceleration;
+	}
 	private Point2D.Double center;
 	private double degrees;
 	private double distance = 0; // distance from point A on current segment, meters

@@ -8,4 +8,6 @@ public interface Road {
 	public double getLength(); 
 	public Point2D.Double getA();
 	public Point2D.Double getB();
+	public Point2D.Double getPoint(double distance);
+	public double getSpeedLimit();
 }

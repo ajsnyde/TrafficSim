@@ -6,6 +6,7 @@ abstract class Segment implements Road{
 	static int id = 0;
 	final int ID = id++;
 	double length;
+	double speedLimit;
 	Point2D.Double a, b;
 	Control controlA = null;
 	Control controlB = null;

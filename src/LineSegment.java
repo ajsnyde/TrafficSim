@@ -16,6 +16,7 @@ public class LineSegment extends Segment {
 		private int calories = 0;
 		private Control controlA = null;
 		private Control controlB = null;
+		private double speedLimit = 10; // meters per second
 		
 		public Builder(Point2D.Double a, Point2D.Double b) {
 			this.a = a;
@@ -44,7 +45,12 @@ public class LineSegment extends Segment {
 		public Builder calories(int val)
         { calories = val;      return this; }
 		
-        public LineSegment build() {
+		public Builder speedLimit(double speedLimit) {
+			this.speedLimit  = speedLimit;
+			return this;
+		}
+		
+		public LineSegment build() {
             return new LineSegment(this);
         }
 
@@ -75,6 +81,10 @@ public class LineSegment extends Segment {
 
 	public double getLength() {
 		return length;
+	}
+	
+	public double getSpeedLimit() {
+		return speedLimit;
 	}
 
 	public Point2D.Double getA() {
