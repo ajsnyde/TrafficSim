@@ -16,6 +16,7 @@ public class Driver {
 			car.setSpeed(car.getSpeed()+car.getAcceleration());
 		else if(car.getSpeed() >= 0 + car.getAcceleration())				// Car should decelerate if over, but never be going in reverse
 			car.setSpeed(car.getSpeed()+car.getAcceleration());
+		else car.setSpeed(0);												// Last-ditch effort to thwart bugs. For now..
 		
 		car.setDegrees(road.getDegrees(car.getDistance()));
 		car.setDistance(car.getDistance()+car.getSpeed());

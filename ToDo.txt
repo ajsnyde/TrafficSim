@@ -1,0 +1,22 @@
+TO DO:
+~~~~~~~~~~~~~~~~~~~
+Just about everything, but short term focus is on:
+	- creating good database structure and reader
+		- Will take a while
+	
+	- finishing the super-basic preliminary objects (LineSegment & Vehicle & Tester)
+	- fixing angle calc; should take 2 min.
+
+	- creating support for connections between roads; vehicles should be able to pick roads using Drivers
+	- interfacing more methods as needed
+
+	
+	mid-term larger goals:
+		- create GUI for DB import - user should be able to select specific objects and types
+		- figure out how I will render visuals - use standard Graphics? Perhaps OpenGL?
+			- 2D is the focus. Really don't need anything overkill.
+		- listener system for controls (stoplights, signs, etc.)
+	
+	long-term larger goals:
+		- editor for roads and vehicles
+		- full-on real-time simulation
