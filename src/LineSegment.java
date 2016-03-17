@@ -9,6 +9,7 @@ public class LineSegment extends Segment {
 		// Required parameters
 		private Point2D.Double a, b;
 		private double length;
+		private double degrees;
 		private ArrayList<Integer> connectionsA = new ArrayList<Integer>();
 		private ArrayList<Integer> connectionsB = new ArrayList<Integer>();
 		
@@ -69,7 +70,7 @@ public class LineSegment extends Segment {
 		Data.roads.put(ID, this);
 	}
 
-	public double getDegrees(double length) {
+	public double getDegrees( double length) {
 		return (Math.toDegrees(Math.atan((b.getY()-a.getY())/(b.getX()-a.getX()))));
 	}
 	

@@ -4,11 +4,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Data {
@@ -67,6 +69,7 @@ public class Data {
 				double y1 = rs.getDouble("y1");
 				double y2 = rs.getDouble("y2");
 				new LineSegment.Builder(new Point2D.Double(x1,y1),new Point2D.Double(x2,y2)).build();
+				
 			}
 			
 			dbCon.close();
@@ -121,5 +124,6 @@ public class Data {
 		
 		return false;
 	}
+	
 	
 }

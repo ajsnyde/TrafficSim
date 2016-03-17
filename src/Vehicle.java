@@ -4,8 +4,29 @@ import java.awt.geom.Point2D;
 public class Vehicle {
 	static int id = 0;
 	final int ID = id++;
-	String type;
+	String type = "Vehicle";
+	
+	//required for safe operations
 	private int segmentID;
+	private Point2D.Double center;
+	private double degrees;
+	
+	// optional - automatically set
+	private double distance = 0; // distance from point A on current segment, meters
+	private Dimension size = new Dimension(2,5); // meters; width and length
+	private double speed = 0;	// meters per second
+	
+	
+	public Vehicle(int segmentID){
+		this.segmentID = segmentID;
+		center = Data.roads.get(segmentID).a;
+		degrees = Data.roads.get(segmentID).getDegrees(0);
+		if(Data.roads.get(segmentID) == null)
+			throw new IllegalArgumentException("SegmentID not found! Vehicle not added to hash!");
+		else
+			Data.vehicles.put(ID, this);
+	}
+	
 	public int getSegmentID() {
 		return segmentID;
 	}
@@ -61,11 +82,6 @@ public class Vehicle {
 	public void setAcceleration(double acceleration) {
 		this.acceleration = acceleration;
 	}
-	private Point2D.Double center;
-	private double degrees;
-	private double distance = 0; // distance from point A on current segment, meters
-	private Dimension size = new Dimension(2,5); // meters; width and length
-	private double speed = 0;	// meters per second
 	
 	public static class Builder {
 		// Required parameters
