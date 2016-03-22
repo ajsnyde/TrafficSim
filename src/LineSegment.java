@@ -1,4 +1,9 @@
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 
 public class LineSegment extends Segment {
@@ -94,5 +99,11 @@ public class LineSegment extends Segment {
 
 	public Point2D.Double getB() {
 		return b;
+	}
+	
+	public void draw(Graphics2D g, Dimension dim, Rectangle2D.Double view) {
+		//TODO: Replace with code that scales properly.
+		g.setColor(new Color(0,0,0));
+		g.drawLine((int)a.x, (int)a.y, (int)b.x, (int)b.y);
 	}
 }

@@ -1,11 +1,6 @@
-/Control.class
-/Data.class
-/Driver.class
-/LineSegment$Builder.class
-/LineSegment.class
-/Road.class
-/Segment.class
-/Tester.class
-/Vehicle$Builder.class
-/Vehicle.class
-/VehicleInterface.class
+/TrafficGUI$1.class
+/TrafficGUI.class
+/Visual.class
+/CohenSutherland.class
+/Visual$Canvas.class
+/TrafficGUI$2.class

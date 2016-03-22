@@ -30,5 +30,7 @@ public class Tester {
 		driver.tick();
 		driver.tick();
 		
+		TrafficGUI traffic = new TrafficGUI();
+		
 	}
 }
